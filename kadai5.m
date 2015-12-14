@@ -6,6 +6,7 @@
 ORG=imread('Lenna.png'); % 原画像の入力
 ORG = rgb2gray(ORG); % カラー画像を白黒濃淡画像へ変換
 imagesc(ORG); colormap(gray); colorbar;
+xlabel('x');ylabel('y'); % ラベルの記入
 pause;
 
 H = imhist(ORG); %ヒストグラムのデータを列ベクトルEに格納
@@ -31,4 +32,5 @@ end;
 
 IMG = ORG > max_thres;
 imagesc(IMG); colormap(gray); colorbar;
+xlabel('x');ylabel('y'); % ラベルの記入
 pause;
